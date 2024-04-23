@@ -2,7 +2,8 @@ const express = require('express')
 const app = express()
 
 app.get('/', (req, res) => {
-  res.send('<h1>Moi World!</h1>')
+  const timestamp = new Date().toLocaleString();
+  res.send('<h1>Moi World!</h1><p>Timestamp: ${timestamp}</p>')
 })
 
 const PORT = 8080
